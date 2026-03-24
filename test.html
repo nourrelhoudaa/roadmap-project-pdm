@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPLETE ROADMAP | AI Multi-Agent System for Solar PV Predictive Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f7fc;
+            color: #1a2c3e;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a2b38 0%, #155a7a 100%);
+            color: white;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .hero h1 i {
+            background: #f3b33d;
+            padding: 12px;
+            border-radius: 60px;
+            font-size: 1.6rem;
+            color: #1e2f3a;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 1.5rem;
+        }
+        .badge {
+            background: rgba(255,255,240,0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin: 2.5rem 0 1.2rem 0;
+            border-left: 7px solid #f3b33d;
+            padding-left: 1.2rem;
+            color: #0f3b4f;
+        }
+        .section-subtitle {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem 0;
+            color: #1f6e8c;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        /* Cards Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.6rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e2edf2;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f5e7e;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .card h3 i {
+            color: #f3b33d;
+        }
+        .timeline-card {
+            background: #fffef7;
+            border-left: 5px solid #f3b33d;
+        }
+
+        /* Week Table */
+        .week-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .week-table th {
+            background: #e6f0f5;
+            padding: 14px 10px;
+            font-weight: 700;
+            color: #155a7a;
+            border: 1px solid #cde1e9;
+        }
+        .week-table td {
+            padding: 12px 10px;
+            border: 1px solid #e0ecf2;
+            vertical-align: top;
+        }
+        .role-badge {
+            background: #fef2e0;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 2px 0;
+        }
+
+        .tool-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .tool {
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-family: monospace;
+            font-weight: 500;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        .checklist li i {
+            color: #2c9c7c;
+            margin-top: 0.2rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #f3b33d, #cbd5e1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: #4a6f84;
+            border-top: 1px solid #cde1e9;
+        }
+        @media (max-width: 780px) {
+            .container { padding: 1rem; }
+            .hero h1 { font-size: 1.6rem; }
+            .section-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Hero Header -->
+    <div class="hero">
+        <h1><i class="fas fa-solar-panel"></i> AI-Driven Multi-Agent System for Solar PV Predictive Maintenance</h1>
+        <p><strong>Starting from scratch – complete 6‑week master plan for you and your 3 teammates.</strong><br>
+        Everything: team roles, tools, data sources, methodology, weekly breakdown, deliverables, and final demo.</p>
+        <div class="hero-badges">
+            <span class="badge"><i class="fas fa-users"></i> 4‑person team</span>
+            <span class="badge"><i class="fas fa-calendar-alt"></i> 6 weeks | sprint-based</span>
+            <span class="badge"><i class="fas fa-robot"></i> 5-agent architecture</span>
+            <span class="badge"><i class="fas fa-chart-line"></i> ML: RF, LSTM, Autoencoder, LLM</span>
+            <span class="badge"><i class="fas fa-database"></i> PVGIS + NASA + hybrid sensors</span>
+        </div>
+    </div>
+
+    <!-- 1. TEAM ROLES & RESPONSIBILITIES -->
+    <div class="section-title"><i class="fas fa-user-friends"></i> Team Structure & Roles (4 people, clear ownership)</div>
+    <div class="card-grid">
+        <div class="card">
+            <h3><i class="fas fa-brain"></i> Person A – ML/AI Lead</h3>
+            <p><strong>Focus:</strong> All machine learning models, data science, feature engineering, model evaluation.</p>
+            <div class="tool-list">
+                <span class="tool">scikit-learn</span><span class="tool">TensorFlow/Keras</span>
+                <span class="tool">PyTorch</span><span class="tool">Prophet</span><span class="tool">XGBoost</span>
+                <span class="tool">pandas/numpy</span><span class="tool">Jupyter</span>
+            </div>
+            <p><strong>Deliverables:</strong> Trained RF, LSTM, Autoencoder, Prophet baseline + LLM explainability module.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-network-wired"></i> Person B – MAS & Architecture Lead</h3>
+            <p><strong>Focus:</strong> Multi‑agent system (SPADE), agent logic, communication protocols, coordination.</p>
+            <div class="tool-list">
+                <span class="tool">SPADE (XMPP)</span><span class="tool">asyncio</span>
+                <span class="tool">Docker</span><span class="tool">FastAPI</span><span class="tool">pytest</span>
+            </div>
+            <p><strong>Deliverables:</strong> 5 running agents (Sensor, Diagnostic, Predictive, Decision, Coordinator) + inter‑agent messaging.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-chalkboard-user"></i> Person C – UI & Infrastructure Lead</h3>
+            <p><strong>Focus:</strong> Data pipeline, dashboards, simulation environment, API integration, testing.</p>
+            <div class="tool-list">
+                <span class="tool">Streamlit/Plotly</span><span class="tool">SQLite/PostgreSQL</span>
+                <span class="tool">PVGIS API</span><span class="tool">Modbus (inverter)</span><span class="tool">GitHub Actions</span>
+            </div>
+            <p><strong>Deliverables:</strong> Real‑time dashboard, data ingestion pipeline, demo environment, final UI.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-microchip"></i> Person D – Integration & QA (or cross‑functional)</h3>
+            <p><strong>Focus:</strong> End‑to‑end integration, documentation, system testing, presentation prep.</p>
+            <div class="tool-list">
+                <span class="tool">pytest</span><span class="tool">Selenium</span><span class="tool">Git</span>
+                <span class="tool">Markdown</span><span class="tool">Docker Compose</span>
+            </div>
+            <p><strong>Deliverables:</strong> Integrated system tests, final report, demo video, slide deck.</p>
+        </div>
+    </div>
+
+    <!-- 2. COMPLETE TOOLCHAIN + SOURCES -->
+    <div class="section-title"><i class="fas fa-toolbox"></i> Full Toolchain & Data Sources (everything you need)</div>
+    <div class="card-grid">
+        <div class="card">
+            <h3><i class="fas fa-database"></i> Data Sources (Free/Open)</h3>
+            <ul style="margin-left: 1.2rem;">
+                <li><strong>PVGIS API</strong> – historical irradiance, PV simulation (EU, free)</li>
+                <li><strong>NASA POWER</strong> – 30+ years weather: temp, wind, humidity, solar radiation</li>
+                <li><strong>OpenWeatherMap</strong> – real‑time weather & sandstorm alerts (free tier)</li>
+                <li><strong>Solcast</strong> – real‑time/forecast irradiance (free tier)</li>
+                <li><strong>Inverter data</strong> – via Modbus TCP/RTU or manufacturer API (SMA, Fronius, Huawei)</li>
+                <li><strong>Synthetic generator</strong> – pvlib + custom fault injection for testing</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-microchip"></i> Hardware (optional hybrid)</h3>
+            <ul style="margin-left: 1.2rem;">
+                <li><i class="fas fa-check-circle" style="color:#2c9c7c;"></i> <strong>Minimal:</strong> Inverter + free APIs → 75% accuracy</li>
+                <li><i class="fas fa-plus-circle"></i> <strong>Recommended:</strong> Raspberry Pi + pyranometer ($80) + dust sensor ($30) → 90% accuracy</li>
+                <li><i class="fas fa-charging-station"></i> Modbus connection to existing inverter → no extra hardware needed</li>
+            </ul>
+            <div class="tool-list" style="margin-top: 0.8rem;">
+                <span class="tool">ESP32/RPi</span><span class="tool">Pyranometer</span><span class="tool">Dust sensor PMS5003</span>
+                <span class="tool">DS18B20</span><span class="tool">Modbus RTU</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-code"></i> Core Libraries & Frameworks</h3>
+            <div class="tool-list">
+                <span class="tool">Python 3.10+</span><span class="tool">FastAPI</span><span class="tool">SPADE</span>
+                <span class="tool">asyncio</span><span class="tool">Streamlit</span><span class="tool">Plotly</span>
+                <span class="tool">scikit-learn</span><span class="tool">TensorFlow</span><span class="tool">PyTorch</span>
+                <span class="tool">pandas</span><span class="tool">NumPy</span><span class="tool">SQLAlchemy</span>
+                <span class="tool">Docker</span><span class="tool">Git</span><span class="tool">pytest</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. MASTER ROADMAP: 6 WEEKS (DETAILED TABLE) -->
+    <div class="section-title"><i class="fas fa-calendar-week"></i> 6‑Week Master Plan: Daily/Weekly Breakdown</div>
+    <div style="overflow-x: auto;">
+        <table class="week-table">
+            <thead>
+                <tr><th width="10%">Week</th><th width="30%">Person A (ML/AI)</th><th width="30%">Person B (MAS/Arch)</th><th width="30%">Person C (UI/Infra)</th><th>Person D (Integration/QA)</th></tr>
+            </thead>
+            <tbody>
+                <tr style="background:#fef9ef;"><td><strong>Week 1</strong><br>Setup & Data</td>
+                    <td>✔ Setup Python env, Jupyter<br>✔ Literature review: Algerian solar, fault types<br>✔ Explore PVGIS / NASA APIs<br>✔ Baseline EDA notebook</td>
+                    <td>✔ Install SPADE, Docker<br>✔ Design agent UML diagrams<br>✔ Define message schemas (XMPP)<br>✔ Write agent skeleton classes</td>
+                    <td>✔ Create project repo, folder structure<br>✔ Setup SQLite, data ingestion scripts<br>✔ Fetch historical data (PVGIS + NASA)<br>✔ Build synthetic data generator</td>
+                    <td>✔ Configure Git/GitHub workflows<br>✔ Document architecture plan<br>✔ Create shared drive / Notion<br>✔ Setup pytest environment</td>
+                </tr>
+                <tr><td><strong>Week 2</strong><br>Data Pipeline & Foundation</td>
+                    <td>✔ Feature engineering: PR, temperature correction<br>✔ Train baseline Prophet (soiling detection)<br>✔ Start Random Forest for fault classification</td>
+                    <td>✔ Implement Sensor Agent (connects to data stream)<br>✔ Implement Diagnostic Agent skeleton + threshold logic<br>✔ Basic SPADE communication between agents</td>
+                    <td>✔ Build real‑time data simulator (sensor stream)<br>✔ Create API endpoints for agent communication<br>✔ Store historical data in DB, implement caching</td>
+                    <td>✔ Integration test: data flow → Sensor Agent<br>✔ Write week‑2 deliverable checklist<br>✔ Prepare architecture doc draft</td>
+                </tr>
+                <tr style="background:#fef9ef;"><td><strong>Week 3</strong><br>Core ML & Agent Logic</td>
+                    <td>✔ Complete Random Forest training + evaluation<br>✔ Build LSTM model (Keras) for power forecasting<br>✔ Autoencoder (PyTorch) anomaly detection prototype</td>
+                    <td>✔ Predictive Agent wrapper (call ML models)<br>✔ Decision Agent: rule‑based actions (cleaning, inspection)<br>✔ Coordinator Agent: conflict resolution logic</td>
+                    <td>✔ Build data preprocessing pipeline (scaling, outliers)<br>✔ Streamlit dashboard wireframe: live charts, alerts<br>✔ Connect dashboard to database</td>
+                    <td>✔ Validate agent‑ML integration (mock predictions)<br>✔ Create test scenarios (dust, shading, inverter fault)</td>
+                </tr>
+                <tr><td><strong>Week 4</strong><br>Model Tuning & Agent Integration</td>
+                    <td>✔ Hyperparameter tuning (GridSearch / Optuna)<br>✔ Evaluate LSTM + Autoencoder on fault dataset<br>✔ Integrate LLM explainability (local LLM / OpenAI API)</td>
+                    <td>✔ Complete inter‑agent negotiation (XMPP)<br>✔ Implement escalation logic & global optimization<br>✔ Ensure agents run in Docker containers</td>
+                    <td>✔ Enhance UI: agent status cards, real‑time alerts, prediction charts<br>✔ Build LLM report viewer (maintenance summary)<br>✔ Setup logging & monitoring</td>
+                    <td>✔ End‑to‑end integration test: all agents + UI<br>✔ Bug tracking, write test reports<br>✔ Start final report outline</td>
+                </tr>
+                <tr style="background:#fef9ef;"><td><strong>Week 5</strong><br>UI Polish & Full Integration</td>
+                    <td>✔ Finalize all ML models (export .pkl / .h5)<br>✔ Prepare model evaluation metrics (RMSE, F1, reconstruction error)<br>✔ Create prediction API for agents</td>
+                    <td>✔ Stress testing agent communication<br>✔ Implement graceful degradation & error handling<br>✔ Document agent API</td>
+                    <td>✔ Final dashboard: performance ratio, anomaly heatmap, maintenance recommendations<br>✔ Deploy dashboard locally with Docker<br>✔ Integrate real‑time inverter simulation</td>
+                    <td>✔ System testing with fault injection (dust storm simulation)<br>✔ Validate all deliverables against Week‑2/4 milestones<br>✔ Prepare demo script</td>
+                </tr>
+                <tr><td><strong>Week 6</strong><br>Demo, Final Report & Handover</td>
+                    <td>✔ Generate final evaluation report & visualizations<br>✔ LLM module: generate technician‑friendly reports<br>✔ Support final demo</td>
+                    <td>✔ Complete agent orchestration: full MAS runs autonomously<br>✔ Create video recording of agent interactions</td>
+                    <td>✔ UI final touches, responsiveness, demo mode<br>✔ Write README, setup instructions<br>✔ Prepare live demo environment</td>
+                    <td>✔ Final integrated system demonstration<br>✔ Submit comprehensive report (architecture, ML results, UI)<br>✔ Deliver presentation slides + project archive</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 4. METHODOLOGY & AGENT ARCHITECTURE -->
+    <div class="section-title"><i class="fas fa-project-diagram"></i> Methodology: 5‑Agent Architecture & Decision Workflow</div>
+    <div class="card-grid">
+        <div class="card"><h3><i class="fas fa-microphone-alt"></i> 1. Sensor Agent</h3><p>Collects & preprocesses real‑time data: irradiance, temperature, voltage, current, dust (from inverter/API/sensors). Publishes to other agents via XMPP.</p></div>
+        <div class="card"><h3><i class="fas fa-stethoscope"></i> 2. Diagnostic Agent</h3><p>Rule‑based thresholds + Random Forest classification. Detects anomalies: dust, shading, inverter faults, degradation.</p></div>
+        <div class="card"><h3><i class="fas fa-chart-line"></i> 3. Predictive Agent</h3><p>Runs LSTM (forecasting) + Autoencoder (unsupervised anomaly). Predicts failures 24‑48h ahead.</p></div>
+        <div class="card"><h3><i class="fas fa-cogs"></i> 4. Decision Agent</h3><p>Triggers cleaning, inspection, or replacement actions based on diagnostic/predictive scores.</p></div>
+        <div class="card"><h3><i class="fas fa-globe"></i> 5. Coordinator Agent</h3><p>Aggregates signals, resolves conflicts, optimizes global maintenance schedule, escalates critical issues.</p></div>
+    </div>
+
+    <!-- 5. DATA & SENSOR HYBRID SOLUTION (clear plan) -->
+    <div class="section-title"><i class="fas fa-charging-station"></i> Hybrid Data Acquisition – What You Actually Need</div>
+    <div class="card-grid">
+        <div class="card timeline-card">
+            <h3><i class="fas fa-plug"></i> Tier 1 (Mandatory, free)</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> <strong>Inverter data</strong> – Modbus TCP or manufacturer API (SMA, Fronius, Growatt). Provides V, I, Power, temp.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>NASA POWER + PVGIS</strong> – free weather & solar radiation (no hardware).</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Synthetic data generator</strong> (pvlib) to train models before real deployment.</li>
+            </ul>
+            <p><strong>✅ 75% accuracy – enough for MVP</strong></p>
+        </div>
+        <div class="card timeline-card">
+            <h3><i class="fas fa-plus-circle"></i> Tier 2 (Recommended, +$150)</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> Raspberry Pi + pyranometer (irradiance) + dust sensor.</li>
+                <li><i class="fas fa-check-circle"></i> Improves performance ratio calculation, soiling prediction.</li>
+            </ul>
+            <p><strong>✅ 90% accuracy – professional grade</strong></p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-database"></i> Data Pipeline Architecture</h3>
+            <p>Inverter/API → Python collector → SQLite (raw) → preprocessing → feature store → agents consume via REST/SPADE → UI (Streamlit). All containerized with Docker Compose.</p>
+        </div>
+    </div>
+
+    <!-- 6. KEY DELIVERABLES & MILESTONES -->
+    <div class="section-title"><i class="fas fa-flag-checkered"></i> Critical Milestones & Deliverables</div>
+    <div class="card-grid">
+        <div class="card"><h3><i class="fas fa-calendar-week"></i> End of Week 2</h3><ul><li>✔ Clean dataset (historical + synthetic)</li><li>✔ Architecture document (UML, agent communication)</li><li>✔ Data pipeline running (API → DB)</li><li>✔ Agent skeleton code in GitHub</li></ul></div>
+        <div class="card"><h3><i class="fas fa-chart-simple"></i> End of Week 4</h3><ul><li>✔ All 5 agents operational (SPADE)</li><li>✔ RF, LSTM, Autoencoder trained & evaluated</li><li>✔ Dashboard showing real‑time agent alerts</li><li>✔ Inter‑agent messaging working</li></ul></div>
+        <div class="card"><h3><i class="fas fa-trophy"></i> End of Week 6</h3><ul><li>✔ Fully integrated system + UI demo</li><li>✔ LLM explanation module (maintenance reports)</li><li>✔ Final report + presentation slides</li><li>✔ Video demo & deployment guide</li></ul></div>
+    </div>
+
+    <!-- 7. EXACT STEPS: HOW TO START TOMORROW -->
+    <div class="section-title"><i class="fas fa-rocket"></i> How to Start (Day 1 Action Plan)</div>
+    <div class="card">
+        <div class="tool-list" style="justify-content: flex-start; margin-bottom: 1rem;">
+            <span class="tool">Step 1</span><span class="tool">Step 2</span><span class="tool">Step 3</span><span class="tool">Step 4</span><span class="tool">Step 5</span>
+        </div>
+        <ul class="checklist">
+            <li><i class="fas fa-check-circle"></i> <strong>Kickoff meeting (2h):</strong> assign roles, create GitHub repo, set up project board (Trello/GitHub Projects).</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Everyone installs Python + venv + requirements</strong> from the list above (use `requirements.txt`).</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Person C:</strong> fetch initial PVGIS dataset for Algiers (36.75°N, 3.05°E) 2022–2023, store in SQLite.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Person A:</strong> start EDA notebook, understand solar radiation patterns, define target variables (fault labels).</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Person B:</strong> run SPADE example, create a “Hello World” XMPP agent, document agent communication templates.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Person D:</strong> create README, setup CI (GitHub Actions) for linting, define weekly sync meetings (Mon & Thu).</li>
+        </ul>
+        <p><strong>💡 Critical advice:</strong> Use synthetic data for early ML training while real API data is collected. Overlap tasks: don’t wait for data to start agent logic.</p>
+    </div>
+
+    <!-- 8. LLM & ADVANCED MODELS ENHANCEMENT -->
+    <div class="section-title"><i class="fas fa-microphone-alt"></i> AI/ML Models & LLM Integration</div>
+    <div class="card-grid">
+        <div class="card"><h3><i class="fas fa-tree"></i> Core Models</h3><p><strong>Random Forest:</strong> fault classification (dust, shading, inverter)<br><strong>LSTM (BiLSTM):</strong> power forecasting & early degradation<br><strong>Autoencoder (VAE):</strong> unsupervised anomaly detection<br><strong>Prophet:</strong> soiling & seasonal trend baseline</p></div>
+        <div class="card"><h3><i class="fas fa-comment-dots"></i> LLM Module (Explainability)</h3><p>Integrate Mistral 7B / OpenAI GPT to generate natural language reports: “Why cleaning recommended? Dust accumulation + forecasted irradiance drop. Estimated energy loss: 8%.” Provides technician‑friendly insights.</p><div class="tool-list"><span class="tool">LangChain</span><span class="tool">Ollama</span><span class="tool">OpenAI API</span></div></div>
+        <div class="card"><h3><i class="fas fa-chart-line"></i> Alternative Advanced Models</h3><p>Transformer (Time Series Transformer) for long-range forecasting, XGBoost with SHAP for interpretability, CNN-LSTM hybrid for spatial-temporal features.</p></div>
+    </div>
+
+    <!-- 9. RESOURCES & LINKS -->
+    <div class="section-title"><i class="fas fa-link"></i> Essential Resources & Documentation</div>
+    <div class="card-grid">
+        <div class="card"><h3><i class="fas fa-book"></i> APIs & Data</h3><ul><li><a href="https://re.jrc.ec.europa.eu/pvg_tools/en/" target="_blank">PVGIS Tool</a> – official solar data</li><li><a href="https://power.larc.nasa.gov/" target="_blank">NASA POWER</a> – climate & solar</li><li><a href="https://pvlib-python.readthedocs.io/" target="_blank">pvlib Python</a> – simulation library</li><li><a href="https://solcast.com/" target="_blank">Solcast</a> – real-time irradiance API</li></ul></div>
+        <div class="card"><h3><i class="fas fa-robot"></i> Multi-Agent & ML</h3><ul><li><a href="https://spade-mas.readthedocs.io/" target="_blank">SPADE docs</a> – Python agents</li><li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn</a> – RF & metrics</li><li><a href="https://www.tensorflow.org/tutorials/structured_data/time_series" target="_blank">TensorFlow time series</a></li><li><a href="https://pytorch.org/tutorials/beginner/ae_tutorial.html" target="_blank">PyTorch Autoencoder</a></li></ul></div>
+        <div class="card"><h3><i class="fas fa-chalkboard"></i> UI & Deployment</h3><ul><li><a href="https://docs.streamlit.io/" target="_blank">Streamlit Gallery</a></li><li><a href="https://plotly.com/python/" target="_blank">Plotly Dashboards</a></li><li><a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a></li></ul></div>
+    </div>
+
+    <!-- 10. FINAL REMINDERS & SUCCESS TIPS -->
+    <hr>
+    <div style="background: #eef4fa; border-radius: 1.5rem; padding: 1.5rem; margin: 1rem 0;">
+        <h3 style="color: #155a7a;"><i class="fas fa-lightbulb"></i> Final Success Formula</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>✅ <strong>Daily standups (15min)</strong> – keep everyone aligned.</li>
+            <li>✅ <strong>Use synthetic data</strong> in first 2 weeks to avoid waiting for real hardware.</li>
+            <li>✅ <strong>Integrate early</strong> – connect a dummy agent to UI by week 3.</li>
+            <li>✅ <strong>Document as you go</strong> – architecture diagrams, API endpoints, model cards.</li>
+            <li>✅ <strong>Test each milestone</strong> – use pytest to validate agents, ML inference.</li>
+            <li>✅ <strong>Prepare demo scenario</strong> – dust storm simulation, inverter fault injection, LLM explanation.</li>
+        </ul>
+        <p><strong>🎯 By end of week 6:</strong> You will have a fully working AI‑driven multi‑agent system that monitors solar PV, predicts failures, and suggests maintenance – ready for presentation and real‑world deployment in Algeria.</p>
+    </div>
+
+    <footer>
+        <i class="fas fa-sun"></i> Complete roadmap for AI-Driven Multi-Agent Predictive Maintenance | Start now, follow weekly tasks, deliver a professional system in 6 weeks.<br>
+        Made for teams starting from scratch – all tools, data sources, and methodology included.
+    </footer>
+</div>
+</body>
+</html>
